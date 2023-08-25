@@ -21,7 +21,7 @@
         <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
       </header>
       <!-- \/\/\/\/\/aqui vem os inputs e a estrutura do form\/\/\/\/\/-->
-      <form action="">
+      <form id="my-form">
         <!-- Agrupamentos de Campos -->
         <fieldset>
           <div class="fieldset-wrapper">
@@ -31,7 +31,7 @@
               <label for="event-title"
                 >Título do evento <span>(mínimo 8 caracteres)</span></label
               >
-              <input type="text" id="event-title" />
+              <input required minlength="8" type="text" id="event-title" />
             </div>
 
             <div class="input-wrapper">
@@ -80,7 +80,12 @@
                 >Senha de acesso para os participantes
                 <span>(mínimo 8 caracteres)</span></label
               >
-              <input type="password" id="event-password" />
+              <input
+                required
+                minlength="8"
+                type="password"
+                id="event-password"
+              />
             </div>
 
             <div class="checkbox-wrapper">
@@ -112,7 +117,15 @@
         </fieldset>
       </form>
       <footer>
-        <input class="button" type="submit" value="Salvar evento" />
+        <input
+          form="my-form"
+          class="button"
+          type="submit"
+          value="Salvar evento"
+        />
+        <!-- <button class="button" form="my-form">
+          Salvar evento
+   -->
       </footer>
     </div>
   </body>
